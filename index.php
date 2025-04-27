@@ -11,9 +11,9 @@
     <div class="sidebar h-screen w-[250px] bg-white border-gray-100 border-r-2 py-4 px-6">
       <div class="logo flex gap-x-2 items-center">
         <div class="img-logo">
-          <div class="circle bg-[#389644] rounded-full h-[50px] w-[50px]"></div>
+          <div class="circle bg-primary rounded-full h-[50px] w-[50px]"></div>
         </div>
-        <h2 class="font-bold text-2xl drop-shadow-sm">Inter<span class="text-[#389644]">mart </span></h2>
+        <h2 class="font-bold text-2xl drop-shadow-sm">Inter<span class="text-primary">mart </span></h2>
       </div>
 
       <!-- Border bottom -->
@@ -21,25 +21,25 @@
 
       <div class="sidebar-links flex flex-col gap-y-10">
         <ul class="flex flex-col gap-y-4 mt-12">
-          <li class="flex gap-x-1 items-center border-b-2 border-gray-100">
+          <li class="li-sidebar">
           <i class="ph ph-shopping-cart-simple text-2xl opacity-70"></i>
-            <a href="" class="font-semibold inline-block w-full py-2 px-3 text-lg opacity-70  hover:text-[#389644] transition-all duration-500">Data Barang</a>
+            <a href="" class="anchor-sidebar">Data Barang</a>
           </li>
-          <li class="flex gap-x-1 items-center border-b-2 border-gray-100">
+          <li class="li-sidebar">
           <i class="ph ph-scan text-2xl opacity-70"></i>
-            <a href="" class="font-semibold inline-block w-full py-2 px-3 text-lg opacity-70  hover:text-[#389644] transition-all duration-500">Scan Masuk</a>
+            <a href="" class="anchor-sidebar">Scan Masuk</a>
           </li>
-          <li class="flex gap-x-1 items-center border-b-2 border-gray-100">
+          <li class="li-sidebar">
           <i class="ph ph-scan text-2xl opacity-70"></i>
-            <a href="" class="font-semibold inline-block w-full py-2 px-3 text-lg opacity-70  hover:text-[#389644] transition-all duration-500">Scan Keluar</a>
+            <a href="" class="anchor-sidebar">Scan Keluar</a>
           </li>
-          <li class="flex gap-x-1 items-center border-b-2 border-gray-100">
+          <li class="li-sidebar">
           <i class="ph ph-clock-counter-clockwise text-2xl opacity-70"></i>
-            <a href="" class="font-semibold inline-block w-full py-2 px-3 text-lg opacity-70  hover:text-[#389644] transition-all duration-500">Histori</a>
+            <a href="" class="anchor-sidebar">Histori</a>
           </li>
         </ul>
         <div class="btn-logout">
-          <a href="" class="font-semibold bg-[#389644] inline-block w-full text-center text-white py-2 px-3 rounded-md">Logout</a>
+          <a href="" class="font-semibold bg-primary inline-block w-full text-center text-white py-2 px-3 rounded-md">Logout</a>
         </div>
       </div>
     </div>
