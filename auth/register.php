@@ -20,11 +20,11 @@
             </div>
             <div class="form-group flex flex-col gap-y-3 mb-5">
             <label for="password" class="font-semibold opacity-70">Password</label>
-            <input type="text" name="password" id="password" class="border-2 border-gray-200 rounded-md p-4 outline-0 focus:border-primary" placeholder="Masukan Password Anda" required>
+            <input type="password" name="password" id="password" class="border-2 border-gray-200 rounded-md p-4 outline-0 focus:border-primary" placeholder="Masukan Password Anda" required>
             </div>
             <div class="form-group flex flex-col gap-y-3">
             <label for="password" class="font-semibold opacity-70">Ulangi Password</label>
-            <input type="text" name="password" id="password" class="border-2 border-gray-200 rounded-md p-4 outline-0 focus:border-primary" placeholder="Masukan Password Anda" required>
+            <input type="password" name="password" id="password" class="border-2 border-gray-200 rounded-md p-4 outline-0 focus:border-primary" placeholder="Masukan Password Anda" required>
             </div>
 
 

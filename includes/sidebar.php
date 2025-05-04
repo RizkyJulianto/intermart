@@ -40,7 +40,7 @@
           </li>
         </ul>
         <div class="btn-logout">
-          <a href="" class="font-semibold bg-primary inline-block w-full text-center text-white py-2 px-3 rounded-md">Logout</a>
+          <a href="auth/login.php" class="font-semibold bg-primary inline-block w-full text-center text-white py-2 px-3 rounded-md">Logout</a>
         </div>
       </div>
     </div>
