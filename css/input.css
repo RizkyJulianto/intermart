@@ -13,13 +13,10 @@
 }
 
 .table-heading {
-    @apply py-2 px-4 text-white bg-primary;
+    @apply py-2 px-4 text-white bg-primary text-center;
 }
 
-table tr:nth-child(even) {
-    @apply bg-gray-100;
-}
 
 .table-data {
-    @apply py-5 px-4 opacity-70;
+    @apply py-5 px-4 opacity-70 border-b border-b-gray-200 text-center;
 }

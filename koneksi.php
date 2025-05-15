@@ -1,5 +1,5 @@
 <?php 
-$koneksi  = mysqli_connect("localhost", "root","","db_sayur");
+$koneksi  = mysqli_connect("localhost", "root","","intermart");
 // if($koneksi) {
 //     echo "berhasil";
 
