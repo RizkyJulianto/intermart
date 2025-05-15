@@ -17,15 +17,11 @@ function tambahBarang($data)
 // Cek jika tombol tambah ditekan
 if (isset($_POST["tambahBarang"])) {
     if (tambahBarang($_POST)) {
-        // Redirect atau tampilkan alert
-        echo "<script>
-            alert('Data berhasil ditambahkan!');
-            window.location.href = 'index.php'; // arahkan ke halaman utama
-        </script>";
+       header('Location: index.php?status=tambah-sukses');
+       exit;
     } else {
-        echo "<script>
-            alert('Data gagal ditambahkan!');
-        </script>";
+        header('Location: index.php?status=tambah-gagal');
+        exit;
     }
 }
 
@@ -42,16 +38,11 @@ function hapusBarang($idbarang) {
 if (isset($_GET["idbarang"])) {
     $id = $_GET["idbarang"];
     if (hapusBarang($id)) {
-        // Redirect atau tampilkan alert
-        echo "<script>
-            alert('Data berhasil dihapus!');
-            window.location.href = 'index.php'; 
-        </script>";
+       header('Location: index.php?status=hapus-sukses');
+       exit;
     } else {
-        echo "<script>
-            alert('Data gagal dihapus!');
-            window.location.href = 'index.php'; 
-        </script>";
+        header('Location: index.php?status=hapus-gagal');
+       exit;
     }
 }
 
@@ -96,4 +87,29 @@ function cariBarang($keyword = '') {
     }
 
     return mysqli_query($koneksi,$query);
+}
+
+function hapusHistori($idhistory) {
+    global $koneksi;
+
+    $idhistory = $_GET['idhistory'];
+    $sql = "DELETE FROM history WHERE idhistory = '$idhistory'";
+    // Karena mysqli_query didalam fungsi maka perlu pake return buat mengembalikan nilai
+    return mysqli_query($koneksi,$sql);
+}
+
+if (isset($_GET["idhistory"])) {
+    $id = $_GET["idhistory"];
+    if (hapusHistori($id)) {
+        // Redirect atau tampilkan alert
+        echo "<script>
+            alert('Data berhasil dihapus!');
+            window.location.href = 'index.php'; 
+        </script>";
+    } else {
+        echo "<script>
+            alert('Data gagal dihapus!');
+            window.location.href = 'index.php'; 
+        </script>";
+    }
 }
