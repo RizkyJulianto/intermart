@@ -82,3 +82,18 @@ if (isset($_POST["ubahBarang"])) {
         </script>";
     }
 }
+
+
+function cariBarang($keyword = '') {
+    global $koneksi;
+
+    $keyword = mysqli_real_escape_string($koneksi,$keyword);
+
+    if(!empty($keyword)) {
+        $query = "SELECT * FROM tbbarang WHERE kodebarang LIKE '%$keyword%' OR namabarang LIKE '%$keyword%' OR stok LIKE '%$keyword%' OR harga LIKE '%$keyword%'";
+    } else {
+        $query = "SELECT * FROM tbbarang";
+    }
+
+    return mysqli_query($koneksi,$query);
+}
