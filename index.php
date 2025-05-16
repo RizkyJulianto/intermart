@@ -18,7 +18,6 @@ if (isset($_GET['keyword'])) {
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
