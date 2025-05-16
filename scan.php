@@ -1,4 +1,4 @@
-<?php include 'includes/sidebar.php'; ?>
+<?php include 'components/sidebar.php'; ?>
 
 <div class="w-screen h-screen flex flex-col items-center justify-center bg-gray-100">
 
