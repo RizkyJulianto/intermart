@@ -1,6 +1,11 @@
 <?php
 include "koneksi.php";
 require "functions.php";
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: auth/login.php");
+    exit();
+} 
 $sql = "SELECT * FROM tbbarang";
 $query = mysqli_query($koneksi, $sql);
 
@@ -11,6 +16,7 @@ if (isset($_GET['keyword'])) {
 }
 
 ?>
+
 
 
 <!DOCTYPE html>
