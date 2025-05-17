@@ -1,15 +1,15 @@
 
-# Intermart 
+# Intermart 🛒
 
 **Intermart** is a web-based stock management application created as part of the BeSmart activities of Intermedia SMEs. This application is equipped with an item data CRUD feature and QR Code integration for more efficient stock management.
 
 
-## Demo
+## Demo 📸
 ![Image](https://github.com/user-attachments/assets/b0fe75f9-3472-4dcc-b01e-88d3ed0346c2)
 
 
 
-## Technology
+## Technology 🛠️
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
   <img width="12" />
@@ -35,7 +35,7 @@
 - HTML5 QRCode JavaScript library to scan QR codes directly from the user's webcam. ([HTML5 QRCode](https://github.com/mebjas/html5-qrcode) 
 
 
-## Features
+## Features 🚀
 - User Login & Register
 - Item data management (Add, Change, Delete)
 - Item search
@@ -44,7 +44,7 @@
 - Interactive notifications with SweetAlert
 
 
-## How to use this Project
+## How to use this Project ☑️
 
 1. Clone this repository :
 
@@ -77,5 +77,10 @@ Replace the username with your GitHub username.
 ```
 
 7. Run the project using a local server such as XAMPP or Laragon.
+8. Access the project through a browser:
+```bash
+  http://localhost/intermart/
+```
+   
 
     
