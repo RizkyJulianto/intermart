@@ -23,7 +23,7 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
 </div>
-..
+
 ###
 - HTML Basic structure of web pages (markup of elements such as forms, tables, capitals, etc.).
 - Tailwind CSS Framework The first CSS utility for styling quickly and responsively.
