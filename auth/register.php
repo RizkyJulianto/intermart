@@ -1,35 +1,8 @@
 <?php
-session_start();
-include "../koneksi.php";
+require '../koneksi.php';
+require '../functions.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = trim($_POST['username']);
-    $password = $_POST['password'];
-    $password_confirm = $_POST['password_confirm'];
-
-    // Cek password dan ulangi password
-    if ($password !== $password_confirm) {
-        $error = "Password dan Ulangi Password tidak cocok!";
-    } else {
-        // Cek username sudah ada atau belum
-        $cekUser = mysqli_query($koneksi, "SELECT * FROM pengguna WHERE username='$username'");
-        if (mysqli_num_rows($cekUser) > 0) {
-            $error = "Username sudah digunakan, silakan pilih yang lain.";
-        } else {
-            // Simpan data user baru (simpan password biasa, untuk lebih aman gunakan hashing!)
-            $query = "INSERT INTO pengguna (username, katasandi) VALUES ('$username', '$password')";
-            if (mysqli_query($koneksi, $query)) {
-                $_SESSION['username'] = $username;
-                header("Location: login.php");
-                exit();
-            } else {
-                $error = "Gagal membuat akun, coba lagi.";
-            }
-        }
-    }
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="button-submit mt-4">
-                <button type="submit" class="w-full bg-primary rounded-md text-white font-semibold text-2xl py-3 cursor-pointer">Buat Akun</button>
+                <button type="submit" name="register" class="w-full bg-primary rounded-md text-white font-semibold text-2xl py-3 cursor-pointer">Buat Akun</button>
             </div>
 
             <div class="link-register flex gap-x-1 justify-center mt-3 items-center">

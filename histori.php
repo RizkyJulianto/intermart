@@ -1,5 +1,10 @@
 <?php
 include "koneksi.php";
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("Location: auth/login.php?status=harus-login");
+  exit();
+}
 $sql = "SELECT * FROM history ORDER BY tanggal DESC";
 $query = mysqli_query($koneksi, $sql);
 ?>
@@ -11,6 +16,8 @@ $query = mysqli_query($koneksi, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Sweetalert -->
+    <link rel="stylesheet" href="assets/sweetalert/sweetalert2.min.css">
     <title>Halaman Histori</title>
 </head>
 
@@ -34,12 +41,6 @@ $query = mysqli_query($koneksi, $sql);
             </form>
 
         </div>
-
-
-        
-
-
-
         <div class="table-content">
             <table class="w-full text-left font-semibold text-lg ">
                 <tr>
@@ -53,11 +54,11 @@ $query = mysqli_query($koneksi, $sql);
                         <td class="table-data-histori"><?= $data['tanggal']; ?></td>
                         <td class="table-data-histori"><?= $data['pesan']; ?></td>
                         <td class="table-data-histori">
-                            <a href="functions.php?idhistory=<?= $data['idhistory'] ?>" class="text-[28px]"><i class="ph ph-trash hover:text-red-600 transition-all duration-300" onclick="return confirm('Apakah Anda Yakin ingin Hapus Histori?')"></i></a>
+                            <a href="functions.php?idhistory=<?= $data['idhistory'] ?>" class="text-[28px] btn-hapus"><i class="ph ph-trash hover:text-red-600 transition-all duration-300"></i></a>
                         </td>
                     </tr>
 
-                    
+
 
                 <?php } ?>
 
@@ -65,6 +66,10 @@ $query = mysqli_query($koneksi, $sql);
         </div>
 
     </div>
+
+    <script src="js/main.js"></script>
+    <!-- Sweetalert -->
+    <script src="assets/sweetalert/sweetalert2.min.js"></script>
 </body>
 
 </html>

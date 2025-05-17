@@ -21,7 +21,7 @@
 
 
 .table-data {
-    @apply py-5 px-4 opacity-70 border-b border-b-gray-200 text-center;
+    @apply py-5 px-4 opacity-70 border-b border-b-gray-200 text-center align-middle;
 }
 .table-data-histori {
     @apply py-5 px-4 opacity-70 border-b border-b-gray-200 text-left;
