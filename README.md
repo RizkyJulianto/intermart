@@ -77,6 +77,7 @@ Replace the username with your GitHub username.
 ```
 
 7. Run the project using a local server such as XAMPP or Laragon.
+   
 8. Access the project through a browser:
 ```bash
   http://localhost/intermart/
